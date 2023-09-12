@@ -43,9 +43,8 @@
     </section>
   </div>
 
-
+<p>hola</p>
   <button>Hola</button>
-
   <script src="javascript/pass-show-hide.js"></script>
   <script src="javascript/signup.js"></script>
 
