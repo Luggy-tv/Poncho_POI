@@ -2,7 +2,7 @@
   session_start();
   include_once "php/config.php";
   if(!isset($_SESSION['unique_id'])){
-    header("location: login.php");
+    header("location: index.php");
   }
 ?>
 <?php include_once "header.php"; ?>
@@ -31,7 +31,7 @@
       </div>
       <form action="#" class="typing-area">
         <input type="text" class="incoming_id" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
-        <input type="text" name="message" class="input-field" placeholder="Escriba mensaje aqui..." autocomplete="off">
+        <input type="text" name="message" class="input-field" placeholder="Escriba el mensaje aqui..." autocomplete="off">
         <button><i class="fab fa-telegram-plane"></i></button>
       </form>
     </section>

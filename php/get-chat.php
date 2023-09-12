@@ -27,11 +27,11 @@
                 }
             }
         }else{
-            $output .= '<div class="text">No messages are available. Once you send message they will appear here.</div>';
+            $output .= '<div class="text">No se han enviado mensajes. Empieza la conversacion!</div>';
         }
         echo $output;
     }else{
-        header("location: ../login.php");
+        header("location: ../index.php");
     }
 
 ?>
