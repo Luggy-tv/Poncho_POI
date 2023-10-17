@@ -1,9 +1,9 @@
-<?php 
-  session_start();
-  include_once "php/config.php";
-  if(!isset($_SESSION['unique_id'])){
+<?php
+session_start();
+include_once "php/config.php";
+if (!isset($_SESSION['unique_id'])) {
     header("location: index.php");
-  }
+}
 ?>
 <?php include_once "header.php"; ?>
 
@@ -12,6 +12,7 @@
         <section class="form signup">
 
             <header>
+              
                 <a href="users.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
                 Crear Grupo
             </header>
@@ -28,8 +29,17 @@
                     <label>Seleciona imagen</label>
                     <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
                 </div>
+                <div class="user_invite">
+                    <div class="name-details-group">
+                        <label>Selecciona a los usuarios</label>
+                    </div>
+                    <div class="users-list">
+
+                    </div>
+                </div>
+
                 <div class="field button">
-                    <input type="submit" name="submit" value="Selecciona usuarios">
+                    <input type="submit" name="submit" value="Crear grupo">
                 </div>
             </form>
 
@@ -38,6 +48,8 @@
 
     <!-- <script src="javascript/pass-show-hide.js"></script> -->
     <!-- <script src="javascript/signup.js"></script> -->
+
+    <script src="javascript/creategroup.js"></script>
 
 </body>
 
