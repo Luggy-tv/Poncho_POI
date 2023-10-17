@@ -14,7 +14,7 @@
         <div class="error-text"></div>
         <div class="name-details">
           <div class="field input">
-            <label>OROCAOPDSXF</label>
+            <label>First Name</label>
             <input type="text" name="fname" placeholder="Nombres" required>
           </div>
           <div class="field input">
