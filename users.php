@@ -24,7 +24,7 @@
           </div>
         </div>
         <a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">Cerrar sesion</a>
-        <a href="" class="logout">Crear Grupo</a>
+        <a href="./createGroup.php" class="logout">Crear Grupo</a>
       </header>
       <div class="search">
         <span class="text">Selecciona para hablar!</span>

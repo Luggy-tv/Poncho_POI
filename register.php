@@ -15,25 +15,25 @@ if (isset($_SESSION['unique_id'])) {
         <div class="error-text"></div>
         <div class="name-details">
           <div class="field input">
-            <label>First Name</label>
+            <label>Nombres</label>
             <input type="text" name="fname" placeholder="Nombres" required>
           </div>
           <div class="field input">
-            <label>Last Name</label>
+            <label>Apellidos</label>
             <input type="text" name="lname" placeholder="Apellidos" required>
           </div>
         </div>
         <div class="field input">
-          <label>Email Address</label>
+          <label>Correo Electronico</label>
           <input type="text" name="email" placeholder="Correo" required>
         </div>
         <div class="field input">
-          <label>Password</label>
+          <label>Contraseña</label>
           <input type="password" name="password" placeholder="Contraseña" required>
           <i class="fas fa-eye"></i>
         </div>
         <div class="field image">
-          <label>Select Image</label>
+          <label>Selecciona Imagen</label>
           <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
         </div>
         <div class="field button">
