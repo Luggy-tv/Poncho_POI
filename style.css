@@ -49,6 +49,9 @@ body{
 .form form .name-details{
   display: flex;
 }
+.form form .name-details-group{
+  width: auto;
+}
 .form .name-details .field:first-child{
   margin-right: 10px;
 }

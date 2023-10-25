@@ -25,7 +25,7 @@
           <input type="submit" name="submit" value="Inicia sesion">
         </div>
       </form>
-      <div class="link">No tienes cuenta? <a href="register.php">Crea tu cuenta!</a></div>
+      <div class="link">No tienes cuenta? <a href="./register.php">Crea tu cuenta!</a></div>
     </section>
   </div>
   
