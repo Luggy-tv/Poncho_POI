@@ -12,7 +12,6 @@ if (!isset($_SESSION['unique_id'])) {
         <section class="form signup">
 
             <header>
-              
                 <a href="users.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
                 Crear Grupo
             </header>
@@ -27,7 +26,7 @@ if (!isset($_SESSION['unique_id'])) {
                 </div>
                 <div class="field image">
                     <label>Seleciona imagen</label>
-                    <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
+                    <input type="file" name="image" accept="image/x-png,image/jpeg,image/jpg" required>
                 </div>
                 <div class="user_invite">
                     <div class="name-details-group">
@@ -45,9 +44,6 @@ if (!isset($_SESSION['unique_id'])) {
 
         </section>
     </div>
-
-    <!-- <script src="javascript/pass-show-hide.js"></script> -->
-    <!-- <script src="javascript/signup.js"></script> -->
 
     <script src="javascript/creategroup.js"></script>
 

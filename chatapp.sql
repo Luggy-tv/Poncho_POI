@@ -45,7 +45,19 @@ constraint fk_user
 );
 
 /*
-create table if not exists `task`(
-`task_id` int not null auto_increment,
-`uniqueTask_id `)
+select *from `groups`;
+select * from `groups_users`;
+select *from `users`;
+
+insert into `groups`(`groups`.uniqueGroup_id,`groups`.Group_name,`groups`.img)Values();
+INSERT INTO `groups`(uniqueGroup_id,Group_name,img) VALUES (181061,'Tracalosa','Lmaolmao');
+
+select * from `groups` where uniqueGroup_id = '1066404727';
+
+delete from `groups` where group_id=4;
+delete from `groups` where group_id=5;
+delete from `groups` where group_id=6;
+
+delete from `groups_users` where relation_id =1;
+delete from `groups_users` where relation_id =2;
 */
