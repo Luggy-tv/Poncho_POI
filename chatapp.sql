@@ -44,20 +44,65 @@ constraint fk_user
 		foreign key (uniqueGroup_id) references `groups`(`group_id`)
 );
 
+
+
 /*
 select *from `groups`;
 select * from `groups_users`;
 select *from `users`;
 
-insert into `groups`(`groups`.uniqueGroup_id,`groups`.Group_name,`groups`.img)Values();
 INSERT INTO `groups`(uniqueGroup_id,Group_name,img) VALUES (181061,'Tracalosa','Lmaolmao');
 
 select * from `groups` where uniqueGroup_id = '1066404727';
 
-delete from `groups` where group_id=4;
-delete from `groups` where group_id=5;
-delete from `groups` where group_id=6;
 
-delete from `groups_users` where relation_id =1;
-delete from `groups_users` where relation_id =2;
-*/
+
+drop table `groups`;
+drop table `groups_users`;
+
+truncate table `groups`;
+truncate table `groups_users`;
+
+
+select * from `users`;
+select * from `groups`;
+select * from `groups_users`;
+select * from `messages`;
+
+SELECT 
+	concat(u.fname , ' ', u.lname ) as nombre_usuario,
+    g.Group_name as nombre_grupo
+FROM
+    `users`AS u
+LEFT JOIN
+    `groups_users` AS gu ON u.unique_id = gu.uniqueUser_id
+LEFT JOIN
+    `groups` AS g ON gu.uniqueGroup_id = g.uniqueGroup_id
+order by nombre_usuario;
+
+
+SELECT * FROM users WHERE NOT unique_id = 1507459082 ORDER BY user_id DESC;
+
+SELECT 
+	g.group_id, 
+	g.uniqueGroup_id as unique_id,
+    g.Group_name as fname, 
+    CASE 
+		WHEN lname IS NULL THEN ' '
+		ELSE ' '
+		END as lname ,
+    g.img,
+    `status` 
+FROM `groups` AS g
+left join `groups_users` as gu on g.uniqueGroup_id = gu.uniqueGroup_id
+left join `users` as u on gu.uniqueUser_id = u.unique_id
+WHERE u.unique_id = 1507459082;
+
+ SELECT * FROM messages 
+ WHERE 
+	(incoming_msg_id = 1507459082 OR outgoing_msg_id = 1507459082) 
+ AND 
+	(outgoing_msg_id = 1132285361 OR incoming_msg_id = 1132285361) 
+ ORDER BY msg_id DESC LIMIT 1;
+ 
+ INSERT INTO messages (incoming_msg_id, outgoing_msg_id, msg) VALUES (1071050808,1507459082 , 'Mensaje de Brandon(?) para el grupo');

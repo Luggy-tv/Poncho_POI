@@ -8,7 +8,7 @@
         (mysqli_num_rows($query2) > 0) ? $result = $row2['msg'] : $result ="No se han mandado mensajes";
         (strlen($result) > 28) ? $msg =  substr($result, 0, 28) . '...' : $msg = $result;
         if(isset($row2['outgoing_msg_id'])){
-            ($outgoing_id == $row2['outgoing_msg_id']) ? $you = "You: " : $you = "";
+            ($outgoing_id == $row2['outgoing_msg_id']) ? $you = "Tu: " : $you = "";
         }else{
             $you = "";
         }
