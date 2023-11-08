@@ -1,12 +1,5 @@
 <?php
-
-// print_r($query2);
-while ($row = mysqli_fetch_assoc($querye)) {
-
-    //     print_r("<br> grupo <br>");
-    //  print_r($row);
-
-    
+while ($row = mysqli_fetch_assoc($querye)) {    
     $sql2 = "SELECT * from messages as m left join `users` as u on  m.outgoing_msg_id = u.unique_id where incoming_msg_id = {$row['unique_id']}  ORDER BY msg_id desc Limit 1";
 
     $query2 = mysqli_query($conn, $sql2);
