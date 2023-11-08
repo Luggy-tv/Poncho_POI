@@ -26,9 +26,11 @@ FROM `groups` AS g
 left join `groups_users` as gu on g.uniqueGroup_id = gu.uniqueGroup_id
 left join `users` as u on gu.uniqueUser_id = u.unique_id
 WHERE u.unique_id = {$outgoing_id} ; ";
-$query2 = mysqli_query($conn, $sql2);
 
-if (mysqli_num_rows($query2) > 0) {
+$querye = mysqli_query($conn, $sql2);
+if(mysqli_num_rows($querye)==0){
+    $output .= "";
+}elseif (mysqli_num_rows($querye) > 0) {
     include_once "data_group.php";
 }
 
