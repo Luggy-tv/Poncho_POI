@@ -22,7 +22,7 @@ $sql2 = "SELECT
 		END as lname ,
     g.img,
     `status` 
-FROM `groups` AS g
+FROM `grupos` AS g
 left join `groups_users` as gu on g.uniqueGroup_id = gu.uniqueGroup_id
 left join `users` as u on gu.uniqueUser_id = u.unique_id
 WHERE u.unique_id = {$outgoing_id} ; ";
