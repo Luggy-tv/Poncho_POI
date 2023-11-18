@@ -44,8 +44,8 @@ if (isset($_SESSION['unique_id'])) {
     </section>
   </div>
 
-  <script src="javascript/pass-show-hide.js"></script>
-  <script src="javascript/signup.js"></script>
+  <script src="/javascript/pass-show-hide.js"></script>
+  <script src="/javascript/signup.js"></script>
 
 </body>
 
