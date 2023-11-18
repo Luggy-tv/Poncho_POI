@@ -2,16 +2,16 @@
     session_start();
     include_once "config.php";
 
-    $img_path= $_ENV['RAILWAY_VOLUME_NAME'];
+    $img_path= "/app/php/images/";
 
     $fname = mysqli_real_escape_string($conn, $_POST['fname']);
     $lname = mysqli_real_escape_string($conn, $_POST['lname']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
-
     // echo $img_path;
-    echo getcwd();
+    // echo getcwd();
 
     $password = mysqli_real_escape_string($conn, $_POST['password']);
+
     if(!empty($fname) && !empty($lname) && !empty($email) && !empty($password)){
         if(filter_var($email, FILTER_VALIDATE_EMAIL)){
             $sql = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$email}'");
@@ -32,7 +32,7 @@
                         if(in_array($img_type, $types) === true){
                             $time = time();
                             $new_img_name = $time.$img_name;
-                            if(move_uploaded_file($tmp_name,$img_path."/app/php/image/".$new_img_name)){
+                            if(move_uploaded_file($tmp_name, $img_path . $new_img_name)){
                                 $ran_id = rand(time(), 100000000);
                                 $status = "Activo";
                                 $encrypt_pass = md5($password);
