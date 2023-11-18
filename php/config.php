@@ -8,12 +8,8 @@ $DB_PASSWORD = $_ENV["DB_PASSWORD"];
 $DB_NAME = $_ENV["DB_NAME"];
 $DB_PORT = $_ENV["DB_PORT"];
 
-$hostname = "localhost";
-$username = "root";
-$password = "";
-$dbname = "chatapp";
 
-$conn = mysqli_connect($hostname, $username, $password, $dbname);
+$conn = mysqli_connect($DB_HOST,$DB_USER , $DB_PASSWORD, $DB_NAME,$DB_PORT);
 if (!$conn) {
   echo "Database connection error" . mysqli_connect_error();
 }
