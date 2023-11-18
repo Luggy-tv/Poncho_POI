@@ -1,11 +1,12 @@
 <?php
     session_start();
     include_once "config.php";
+
+    $img_path= $_ENV['RAILWAY_VOLUME_NAME'];
+
     $fname = mysqli_real_escape_string($conn, $_POST['fname']);
     $lname = mysqli_real_escape_string($conn, $_POST['lname']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
-
-    echo exec('whoami');
 
     $password = mysqli_real_escape_string($conn, $_POST['password']);
     if(!empty($fname) && !empty($lname) && !empty($email) && !empty($password)){
@@ -28,7 +29,7 @@
                         if(in_array($img_type, $types) === true){
                             $time = time();
                             $new_img_name = $time.$img_name;
-                            if(move_uploaded_file($tmp_name,"./images/".$new_img_name)){
+                            if(move_uploaded_file($tmp_name,$img_path."/".$new_img_name)){
                                 $ran_id = rand(time(), 100000000);
                                 $status = "Activo";
                                 $encrypt_pass = md5($password);
