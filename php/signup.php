@@ -2,7 +2,7 @@
     session_start();
     include_once "config.php";
 
-    $img_path= $_ENV['RAILWAY_VOLUME_NAME'] . "/images";
+    $img_path= $_ENV['RAILWAY_VOLUME_NAME'];
 
 
     $fname = mysqli_real_escape_string($conn, $_POST['fname']);
