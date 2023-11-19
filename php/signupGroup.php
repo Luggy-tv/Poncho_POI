@@ -24,7 +24,7 @@ if (isset($_SESSION['unique_id'])) {
         if (in_array($img_ext, $extensions) === true) {
             $time = time();
             $new_img_name = $time . $img_name;
-            if (move_uploaded_file($tmp_name, "images/" . $new_img_name)) {
+            if (move_uploaded_file($tmp_name, $img_path. $new_img_name)) {
 
                 $ran_id = rand(time(), 100000000);
 
