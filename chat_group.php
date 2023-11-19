@@ -29,7 +29,7 @@ if (!isset($_SESSION['unique_id'])) {
         }
         ?>
         <a href="users.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
-        <img src="php/images/<?php echo $row['img']; ?>" alt="">
+        <img src="/storage/<?php echo $row['img']; ?>" alt="">
         <div class="details">
           <span>
             <?php echo $row['fname'] . " " . $row['lname'] ?>

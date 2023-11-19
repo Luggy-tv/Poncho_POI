@@ -18,7 +18,7 @@
                 }else{
                     $output .= '<div class="chat incoming">
                                 <div class="groupchat_icon">
-                                    <img src="php/images/'.$row['img'].'" alt=""> 
+                                    <img src="/storage/'.$row['img'].'" alt=""> 
                                     <p> '.$row['fname'].' </p>
                                 </div>
                                 <div class="details">

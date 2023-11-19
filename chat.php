@@ -22,7 +22,7 @@ if (!isset($_SESSION['unique_id'])) {
         ?>
         <a href="users.php" class="back-icon"></a>
 
-        <img src="php/images/<?php echo $row['img']; ?>" alt="">
+        <img src="/storage/<?php echo $row['img']; ?>" alt="">
 
         <div class="details">
           <span>
