@@ -2,14 +2,14 @@
     session_start();
     include_once "config.php";
 
-    $img_path= $_ENV['RAILWAY_VOLUME_NAME'];
+    $img_path= $_ENV['RAILWAY_VOLUME_MOUNT_PATH'];
 
 
     $fname = mysqli_real_escape_string($conn, $_POST['fname']);
     $lname = mysqli_real_escape_string($conn, $_POST['lname']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
 
-    // echo $img_path;
+    echo $img_path;
     // echo getcwd();
 
     $password = mysqli_real_escape_string($conn, $_POST['password']);
