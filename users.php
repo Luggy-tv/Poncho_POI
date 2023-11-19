@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once "php/config.php";
+
 if (!isset($_SESSION['unique_id'])) {
   header("location: index.php");
 }
@@ -18,7 +19,7 @@ if (!isset($_SESSION['unique_id'])) {
             $row = mysqli_fetch_assoc($sql);
           }
           ?>
-          <img src="php/images/<?php echo $row['img']; ?>" alt="">
+          <img src="<?php echo $img_path . $row['img']; ?>" alt="">
           <div class="details">
             <span>
               <?php echo $row['fname'] . " " . $row['lname'] ?>
