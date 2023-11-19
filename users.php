@@ -19,7 +19,7 @@ if (!isset($_SESSION['unique_id'])) {
             $row = mysqli_fetch_assoc($sql);
           }
           ?>
-          <img src="<?php echo $img_path . $row['img']; ?>" alt="">
+          <img src="/storage/"<?php echo $row['img']; ?>" alt="">
           <div class="details">
             <span>
               <?php echo $row['fname'] . " " . $row['lname'] ?>
