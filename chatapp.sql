@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 	primary key (user_id)
 ) ENGINE=InnoDB;
 
-Create Table if not exists `groups`(
+Create Table if not exists `grupos`(
 `group_id` int not null auto_increment,
 `uniqueGroup_id` int not null,
 `Group_name` varchar(225) not null,

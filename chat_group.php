@@ -21,7 +21,7 @@ if (!isset($_SESSION['unique_id'])) {
                                       CASE WHEN g.Group_name IS NULL THEN ' ' ELSE ' ' END as lname , 
                                       g.img as img, 
                                       CASE WHEN g.Group_name IS NULL THEN 'Activo' ELSE 'Activo' end as `status`
-                                      FROM `groups` as g WHERE g.uniqueGroup_id = {$user_id}");
+                                      FROM `grupos` as g WHERE g.uniqueGroup_id = {$user_id}");
         if (mysqli_num_rows($sql) > 0) {
           $row = mysqli_fetch_assoc($sql);
         } else {
@@ -29,7 +29,7 @@ if (!isset($_SESSION['unique_id'])) {
         }
         ?>
         <a href="users.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
-        <img src="php/images/<?php echo $row['img']; ?>" alt="">
+        <img src="/storage/<?php echo $row['img']; ?>" alt="">
         <div class="details">
           <span>
             <?php echo $row['fname'] . " " . $row['lname'] ?>

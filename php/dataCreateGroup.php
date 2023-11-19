@@ -18,7 +18,7 @@ while ($row = mysqli_fetch_assoc($query)) {
     $output .= '<div class="user-checkbox" style="margin-bottom: 5px;">
     <input type="checkbox" id="user_' . $row['unique_id'] . '" name="selected_users[]" value="' . $row['unique_id'] . '">
     <label for="user_' . $row['unique_id'] . '">
-        <img src="php/images/' . $row['img'] . '" alt="" style="width: 50px; height: 50px;">
+        <img src="/storage/' . $row['img'] . '" alt="" style="width: 50px; height: 50px;">
         <span>' . $row['fname'] . " " . $row['lname'] . '</span>
     </label>
     </div>';
